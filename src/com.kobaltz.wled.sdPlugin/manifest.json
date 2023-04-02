@@ -5,7 +5,7 @@
       "Name": "Toggle",
       "States": [
         {
-          "Image": "actionDefaultImage",
+          "Image": "actionIcon",
           "TitleAlignment": "middle",
           "FontSize": "16"
         }
@@ -20,7 +20,7 @@
       "Name": "Scene",
       "States": [
         {
-          "Image": "actionDefaultImage",
+          "Image": "actionIcon",
           "TitleAlignment": "middle",
           "FontSize": "16"
         }

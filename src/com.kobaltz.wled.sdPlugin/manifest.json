@@ -1,49 +1,58 @@
 {
-	"SDKVersion": 2,
-	"Author": "Elgato Systems",
-	"CodePath": "app.html",
-	"Description": "Example description",
-	"Name": "Stream Deck Template",
-	"Icon": "actions/template/assets/action",
-	"URL": "https://www.elgato.com/en/gaming/stream-deck",
-	"Version": "1.0.2",
-	"Software": {
-		"MinimumVersion": "5.0"
-	},
-	"OS": [
-		{
-			"Platform": "mac",
-			"MinimumVersion": "10.11"
-		},
-		{
-			"Platform": "windows",
-			"MinimumVersion": "10"
-		}
-	],
-	"Category": "Template Plugin",
-	"CategoryIcon": "actions/template/assets/actionimage",
-	"Actions": [
-		{
-			"Icon": "actions/template/assets/actionimage",
-			"Name": "Example Action",
-			"Controllers": ["Keypad", "Encoder"],
-			"Encoder": {
-				"layout": "$B1",
-				"TriggerDescription": {
-					"Rotate": "Describe the rotation",
-					"Push": "Describe the encoder push",
-					"Touch": "Describe the touch",
-					"LongTouch": "Describe the long touch"
-				}
-			},
-			"States": [
-				{
-					"Image": "actions/template/assets/action"
-				}
-			],
-			"Tooltip": "This is an example tooltip",
-			"UUID": "com.elgato.template.action",
-			"PropertyInspectorPath": "actions/template/property-inspector/inspector.html"
-		}
-	]
+  "Actions": [
+    {
+      "Icon": "actionIcon",
+      "Name": "Toggle",
+      "States": [
+        {
+          "Image": "actionDefaultImage",
+          "TitleAlignment": "middle",
+          "FontSize": "16"
+        }
+      ],
+      "SupportedInMultiActions": false,
+      "Tooltip": "Toggle Power",
+      "UUID": "com.kobaltz.wled.togglepower",
+      "PropertyInspectorPath": "properties/toggle_power.html"
+    },
+    {
+      "Icon": "actionIcon",
+      "Name": "Scene",
+      "States": [
+        {
+          "Image": "actionDefaultImage",
+          "TitleAlignment": "middle",
+          "FontSize": "16"
+        }
+      ],
+      "SupportedInMultiActions": false,
+      "Tooltip": "Set Scene",
+      "UUID": "com.kobaltz.wled.setscene",
+      "PropertyInspectorPath": "properties/set_scene.html"
+    }
+  ],
+  "SDKVersion": 2,
+  "Author": "Dave Kimura",
+  "CodePath": "code.html",
+  "Category": "LIGHTING",
+  "CategoryIcon": "pluginicon",
+  "Description": "Simple interface to WLED.",
+  "Name": "WLED",
+  "Icon": "pluginIcon",
+  "URL": "https://github.com/kobaltz/streamdeck-wled",
+  "Version": "1.4",
+  "OS": [
+    {
+        "Platform": "mac",
+        "MinimumVersion" : "10.11"
+    },
+    {
+        "Platform": "windows",
+        "MinimumVersion" : "10"
+    }
+  ],
+  "Software":
+    {
+        "MinimumVersion" : "4.1"
+    }
 }

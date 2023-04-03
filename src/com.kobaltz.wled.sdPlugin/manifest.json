@@ -10,6 +10,21 @@
           "FontSize": "16"
         }
       ],
+      "Controllers": [
+        "Keypad",
+        "Encoder"
+      ],
+      "Encoder": {
+        "layout": "$B1",
+        "Icon": "images/dialstack_background.svg",
+        "StackColor": "#0000FF",
+        "TriggerDescription": {
+          "Rotate": "unused",
+          "Push": "next example",
+          "Touch": "next example",
+          "LongTouch": "Unused"
+        }
+      },
       "SupportedInMultiActions": false,
       "Tooltip": "Toggle Power",
       "UUID": "com.kobaltz.wled.togglepower",
@@ -40,7 +55,7 @@
   "Name": "WLED",
   "Icon": "pluginIcon",
   "URL": "https://github.com/kobaltz/streamdeck-wled",
-  "Version": "1.4",
+  "Version": "1.0.1",
   "OS": [
     {
         "Platform": "mac",

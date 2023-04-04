@@ -22,129 +22,15 @@
           </div>
         </div>
       </div>
-      <div class="sdpi-item" id="effect">
+      <div class="sdpi-item">
         <div class="sdpi-item-label">Effect</div>
-        <select class="sdpi-item-value select" name="effect">
-            <option value="0">Solid</option>
-            <option value="1">Blink</option>
-            <option value="2">Breathe</option>
-            <option value="3">Wipe</option>
-            <option value="4">Wipe Random</option>
-            <option value="5">Random Colors</option>
-            <option value="6">Sweep</option>
-            <option value="7">Dynamic</option>
-            <option value="8">Colorloop</option>
-            <option value="9">Rainbow</option>
-            <option value="10">Scan</option>
-            <option value="11">Dual Scan</option>
-            <option value="12">Fade</option>
-            <option value="13">Theater</option>
-            <option value="14">Theater Rainbow</option>
-            <option value="15">Running</option>
-            <option value="16">Saw</option>
-            <option value="17">Twinkle</option>
-            <option value="18">Dissolve</option>
-            <option value="19">Dissolve Rnd</option>
-            <option value="20">Sparkle</option>
-            <option value="21">Sparkle Dark</option>
-            <option value="22">Sparkle+</option>
-            <option value="23">Strobe</option>
-            <option value="24">Strobe Rainbow</option>
-            <option value="25">Strobe Mega</option>
-            <option value="26">Blink Rainbow</option>
-            <option value="27">Android</option>
-            <option value="28">Chase</option>
-            <option value="29">Chase Random</option>
-            <option value="30">Chase Rainbow</option>
-            <option value="31">Chase Flash</option>
-            <option value="32">Chase Flash Rnd</option>
-            <option value="33">Rainbow Runner</option>
-            <option value="34">Colorful</option>
-            <option value="35">Traffic Light</option>
-            <option value="36">Sweep Random</option>
-            <option value="37">Running 2</option>
-            <option value="38">Aurora</option>
-            <option value="39">Stream</option>
-            <option value="40">Scanner</option>
-            <option value="41">Lighthouse</option>
-            <option value="42">Fireworks</option>
-            <option value="43">Rain</option>
-            <option value="44">Merry Christmas</option>
-            <option value="45">Fire Flicker</option>
-            <option value="46">Gradient</option>
-            <option value="47">Loading</option>
-            <option value="48">Police</option>
-            <option value="49">Police All</option>
-            <option value="50">Two Dots</option>
-            <option value="51">Two Areas</option>
-            <option value="52">Circus</option>
-            <option value="53">Halloween</option>
-            <option value="54">Tri Chase</option>
-            <option value="55">Tri Wipe</option>
-            <option value="56">Tri Fade</option>
-            <option value="57">Lightning</option>
-            <option value="58">ICU</option>
-            <option value="59">Multi Comet</option>
-            <option value="60">Scanner Dual</option>
-            <option value="61">Stream 2</option>
-            <option value="62">Oscillate</option>
-            <option value="63">Pride 2015</option>
-            <option value="64">Juggle</option>
-            <option value="65">Palette</option>
-            <option value="66">Fire 2012</option>
-            <option value="67">Colorwaves</option>
-            <option value="68">BPM</option>
-            <option value="69">Fill Noise</option>
-            <option value="70">Noise 1</option>
-            <option value="71">Noise 2</option>
-            <option value="72">Noise 3</option>
-            <option value="73">Noise 4</option>
-            <option value="74">Colortwinkles</option>
-            <option value="75">Lake</option>
-            <option value="76">Meteor</option>
-            <option value="77">Meteor Smooth</option>
-            <option value="78">Railway</option>
-            <option value="79">Ripple</option>
-            <option value="80">Twinklefox</option>
-            <option value="81">Twinklecat</option>
-            <option value="82">Halloween Eyes</option>
-            <option value="83">Solid Pattern</option>
-            <option value="84">Solid Pattern Tri</option>
-            <option value="85">Spots</option>
-            <option value="86">Spots Fade</option>
-            <option value="87">Glitter</option>
-            <option value="88">Candle</option>
-            <option value="89">Fireworks Starburst</option>
-            <option value="90">Fireworks 1D</option>
-            <option value="91">Bouncing Balls</option>
-            <option value="92">Sinelon</option>
-            <option value="93">Sinelon Dual</option>
-            <option value="94">Sinelon Rainbow</option>
-            <option value="95">Popcorn</option>
-            <option value="96">Drip</option>
-            <option value="97">Plasma</option>
-            <option value="98">Percent</option>
-            <option value="99">Ripple Rainbow</option>
-            <option value="100">Heartbeat</option>
-            <option value="101">Pacifica</option>
-            <option value="102">Candle Multi</option>
-            <option value="103">Solid Glitter</option>
-            <option value="104">Sunrise</option>
-            <option value="105">Phased</option>
-            <option value="106">TwinkleUp</option>
-            <option value="107">Noise Pal</option>
-            <option value="108">Sine</option>
-            <option value="109">Phased Noise</option>
-            <option value="110">Flow</option>
-            <option value="111">Chunchun</option>
-            <option value="112">Dancing Shadows</option>
-            <option value="113">Washing machine</option>
-            <option value="114">Candy Cane</option>
-            <option value="115">Blends</option>
-            <option value="116">TV Simulator</option>
-            <option value="117">Dynamic Smooth</option>
-          </select>
-        </div>
+        <select class="sdpi-item-value select" id="effect" name="effect">
+        </select>
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Palette</div>
+        <select class="sdpi-item-value select" id="palette" name="palette">
+        </select>
       </div>
     </form>
   </div>
@@ -163,6 +49,7 @@
 
   <!-- Property Inspector Source -->
   <script src="inspector.js"></script>
+  <script src="set_scene.js"></script>
 </body>
 
 </html>

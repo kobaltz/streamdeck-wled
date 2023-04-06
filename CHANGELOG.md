@@ -1,5 +1,7 @@
 # 2023-04-05 - Presets
   - Added support for presets
+  - Toggle power action now uses the new power icons
+  - Toggle power new will toggle all power buttons with the same IP address
 
 # 2023-04-04 - Setting Effects and Palettes
   - Dynamically get the list of effects and palettes from WLED

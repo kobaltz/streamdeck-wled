@@ -7,7 +7,7 @@
     content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <title>WLED Set Scene</title>
+  <title>WLED Set Preset</title>
   <link rel="stylesheet" href="../libs/css/sdpi.css" />
 </head>
 
@@ -23,13 +23,25 @@
         </div>
       </div>
       <div class="sdpi-item">
-        <div class="sdpi-item-label">Effect</div>
-        <select class="sdpi-item-value select" id="effect" name="effect">
-        </select>
-      </div>
-      <div class="sdpi-item">
-        <div class="sdpi-item-label">Palette</div>
-        <select class="sdpi-item-value select" id="palette" name="palette">
+        <div class="sdpi-item-label">Select Preset</div>
+        <select class="sdpi-item-value select" id="preset" name="preset">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
         </select>
       </div>
     </form>
@@ -49,7 +61,6 @@
 
   <!-- Property Inspector Source -->
   <script src="inspector.js"></script>
-  <script src="set_scene.js"></script>
 </body>
 
 </html>

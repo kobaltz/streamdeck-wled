@@ -44,6 +44,21 @@
       "Tooltip": "Set Scene",
       "UUID": "com.kobaltz.wled.setscene",
       "PropertyInspectorPath": "properties/set_scene.html"
+    },
+    {
+      "Icon": "actionIcon",
+      "Name": "Preset",
+      "States": [
+        {
+          "Image": "actionIcon",
+          "TitleAlignment": "middle",
+          "FontSize": "16"
+        }
+      ],
+      "SupportedInMultiActions": false,
+      "Tooltip": "Set Preset",
+      "UUID": "com.kobaltz.wled.setpreset",
+      "PropertyInspectorPath": "properties/set_preset.html"
     }
   ],
   "SDKVersion": 2,

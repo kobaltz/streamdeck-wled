@@ -31,11 +31,11 @@
       "PropertyInspectorPath": "properties/toggle_power.html"
     },
     {
-      "Icon": "actionIcon",
+      "Icon": "images/scene",
       "Name": "Scene",
       "States": [
         {
-          "Image": "actionIcon",
+          "Image": "images/scene",
           "TitleAlignment": "bottom",
           "FontSize": "16"
         }
@@ -46,12 +46,12 @@
       "PropertyInspectorPath": "properties/set_scene.html"
     },
     {
-      "Icon": "actionIcon",
+      "Icon": "images/preset",
       "Name": "Preset",
       "States": [
         {
-          "Image": "actionIcon",
-          "TitleAlignment": "middle",
+          "Image": "images/preset",
+          "TitleAlignment": "bottom",
           "FontSize": "16"
         }
       ],

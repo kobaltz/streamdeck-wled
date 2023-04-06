@@ -1,4 +1,5 @@
 const togglePowerAction = new Action('com.kobaltz.wled.togglepower')
+const contextsByIpAddress = new Map()
 togglePowerAction.onKeyUp(({ action, context, device, event, payload }) => {
   fetch(`http://${payload.settings.ip_address}/json/state`, {
     method: 'POST',
@@ -10,6 +11,18 @@ togglePowerAction.onKeyUp(({ action, context, device, event, payload }) => {
       "v": true
     })
   })
+    .then(response => response.json())
+    .then(data => {
+      const image = data.on ? "images/power-on.png" : "images/power-off.png"
+      const title = data.on ? "On" : "Off"
+      const ipAddress = payload.settings.ip_address
+      if (contextsByIpAddress.has(ipAddress)) {
+        const contexts = contextsByIpAddress.get(ipAddress)
+        contexts.forEach((buttonContext) => {
+          $SD.setImage(buttonContext, image, title)
+        })
+      }
+    })
 })
 
 togglePowerAction.onDialRotate(({ action, context, device, event, payload }) => {
@@ -49,6 +62,18 @@ togglePowerAction.onDialPress(({ action, context, device, event, payload }) => {
         "v": true
       })
     })
+      .then(response => response.json())
+      .then(data => {
+        const image = data.on ? "images/power-on.png" : "images/power-off.png"
+        const title = data.on ? "On" : "Off"
+        const ipAddress = payload.settings.ip_address
+        if (contextsByIpAddress.has(ipAddress)) {
+          const contexts = contextsByIpAddress.get(ipAddress)
+          contexts.forEach((buttonContext) => {
+            $SD.setImage(buttonContext, image, title)
+          })
+        }
+      })
   }
 })
 
@@ -62,6 +87,14 @@ togglePowerAction.onTouchTap(({ action, context, device, event, payload }) => {
       "on": 't',
       "v": true
     })
+  }).then( () =>{
+    const ipAddress = payload.settings.ip_address
+    if (contextsByIpAddress.has(ipAddress)) {
+      const contexts = contextsByIpAddress.get(ipAddress)
+      contexts.forEach((buttonContext) => {
+        $SD.setImage(buttonContext, "images/power-on.png", "On")
+      })
+    }
   })
 })
 
@@ -72,5 +105,30 @@ togglePowerAction.onWillAppear(({ action, context, device, event, payload }) => 
       $SD.setFeedback(context, {
         'value': Math.round((data.bri / 255) * 100),
       })
+
+      const ipAddress = payload.settings.ip_address
+      if (!contextsByIpAddress.has(ipAddress)) { contextsByIpAddress.set(ipAddress, new Set())}
+      contextsByIpAddress.get(ipAddress).add(context)
+
+      const image = data.on ? "images/power-on.png" : "images/power-off.png"
+      const title = data.on ? "On" : "Off"
+
+      if (contextsByIpAddress.has(ipAddress)) {
+        const contexts = contextsByIpAddress.get(ipAddress)
+        contexts.forEach((buttonContext) => {
+          $SD.setImage(buttonContext, image, title)
+        })
+      }
     })
+})
+
+togglePowerAction.onWillDisappear(({ action, context, device, event, payload }) => {
+  const ipAddress = payload.settings.ip_address
+  if (contextsByIpAddress.has(ipAddress)) {
+    const contexts = contextsByIpAddress.get(ipAddress)
+    contexts.delete(context)
+    if (contexts.size === 0) {
+      contextsByIpAddress.delete(ipAddress)
+    }
+  }
 })

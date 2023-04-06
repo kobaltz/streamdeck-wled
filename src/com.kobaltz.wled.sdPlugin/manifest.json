@@ -1,12 +1,12 @@
 {
   "Actions": [
     {
-      "Icon": "actionIcon",
+      "Icon": "images/power-off",
       "Name": "Toggle",
       "States": [
         {
-          "Image": "actionIcon",
-          "TitleAlignment": "middle",
+          "Image": "images/power-off",
+          "TitleAlignment": "bottom",
           "FontSize": "16"
         }
       ],
@@ -36,7 +36,7 @@
       "States": [
         {
           "Image": "actionIcon",
-          "TitleAlignment": "middle",
+          "TitleAlignment": "bottom",
           "FontSize": "16"
         }
       ],
@@ -65,10 +65,10 @@
   "Author": "Dave Kimura",
   "CodePath": "code.html",
   "Category": "LIGHTING",
-  "CategoryIcon": "pluginicon",
+  "CategoryIcon": "images/power-on",
   "Description": "Simple interface to WLED.",
   "Name": "WLED",
-  "Icon": "pluginIcon",
+  "Icon": "images/power-on",
   "URL": "https://github.com/kobaltz/streamdeck-wled",
   "Version": "1.0.1",
   "OS": [

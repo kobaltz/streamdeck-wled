@@ -1,0 +1,2 @@
+#!/bin/bash
+DistributionTool -b -i src/com.kobaltz.wled.sdPlugin -o Releases

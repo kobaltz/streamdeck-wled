@@ -1,3 +1,6 @@
+# 2023-04-05 - Presets
+  - Added support for presets
+
 # 2023-04-04 - Setting Effects and Palettes
   - Dynamically get the list of effects and palettes from WLED
   - Refactored some items to simplify the code

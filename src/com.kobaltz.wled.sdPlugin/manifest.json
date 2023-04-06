@@ -19,9 +19,9 @@
         "Icon": "images/dialstack_background.svg",
         "StackColor": "#0000FF",
         "TriggerDescription": {
-          "Rotate": "unused",
-          "Push": "next example",
-          "Touch": "next example",
+          "Rotate": "Change Brightness",
+          "Push": "Toggle Power",
+          "Touch": "Toggle Power",
           "LongTouch": "Unused"
         }
       },

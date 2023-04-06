@@ -64,7 +64,7 @@
   "SDKVersion": 2,
   "Author": "Dave Kimura",
   "CodePath": "code.html",
-  "Category": "LIGHTING",
+  "Category": "WLED",
   "CategoryIcon": "images/power-on",
   "Description": "Simple interface to WLED.",
   "Name": "WLED",

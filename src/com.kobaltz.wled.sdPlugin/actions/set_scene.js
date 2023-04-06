@@ -14,7 +14,11 @@ setSceneAction.onKeyUp(({ action, context, device, event, payload }) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(wled_paylod)
-  })
+  }).then(response => response.json())
+    .then(data => {
+      updateImage(data, payload)
+    }
+  )
 })
 
 setSceneAction.onDialRotate(({ action, context, device, event, payload }) => {

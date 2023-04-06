@@ -16,7 +16,7 @@
       ],
       "Encoder": {
         "layout": "$B1",
-        "Icon": "images/dialstack_background.svg",
+        "Icon": "images/power-on",
         "StackColor": "#0000FF",
         "TriggerDescription": {
           "Rotate": "Change Brightness",

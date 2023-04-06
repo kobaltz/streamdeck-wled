@@ -13,11 +13,13 @@ you can:
  - select the preset of a WLED source.
 
 ## Screenshots
-![Toggle Power](togglepower.png "Toggle Power")
+![Overall](screenshots/Overall.png "Overall")
 
-![Select Scene](scene.png "Select Scene")
+![Toggle Power](screenshots/togglepower.png "Toggle Power")
 
-![Select Preset](preset.png "Select Preset")
+![Select Scene](screenshots/scene.png "Select Scene")
+
+![Select Preset](screenshots/preset.png "Select Preset")
 
 
 ## Features

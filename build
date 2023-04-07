@@ -1,2 +1,3 @@
 #!/bin/bash
+rm -rf Releases/com.kobaltz.wled.streamDeckPlugin
 DistributionTool -b -i src/com.kobaltz.wled.sdPlugin -o Releases

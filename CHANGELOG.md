@@ -1,3 +1,9 @@
+# Version 1.0.3
+
+## 2023-04-07 - Minor Fixes
+  - Updated preview image for marketplace
+  - Updated IP Address text box to match style guides
+
 # Version 1.0.2
 
 ## 2023-04-05 - Presets & Icons

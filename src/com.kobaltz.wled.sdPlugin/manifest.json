@@ -70,7 +70,7 @@
   "Name": "WLED",
   "Icon": "images/power-on",
   "URL": "https://github.com/kobaltz/streamdeck-wled",
-  "Version": "1.0.2",
+  "Version": "1.0.3",
   "OS": [
     {
         "Platform": "mac",

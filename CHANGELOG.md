@@ -1,4 +1,10 @@
-# Version 1.0.3
+# Version 1.0.4
+
+## 2023-04-07 - Added Brightness Setting
+  - Presets and Scenes now have a brightness setting
+  - NOTE: If your preset already has a brightness setting configured,
+    it will be used instead of the one in the plugin unless
+    you press the button again.
 
 ## 2023-04-07 - Minor Fixes
   - Updated preview image for marketplace

@@ -4,7 +4,8 @@ setPresetAction.onKeyUp(({ action, context, device, event, payload }) => {
   let wled_paylod = {
     "on": true,
     "v": true,
-    "ps": payload.settings.preset
+    "ps": payload.settings.preset,
+    "bri": payload.settings.brightness
   }
   fetch(`http://${payload.settings.ip_address}/json/state`, {
     method: 'POST',

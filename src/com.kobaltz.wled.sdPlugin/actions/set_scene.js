@@ -5,7 +5,8 @@ setSceneAction.onKeyUp(({ action, context, device, event, payload }) => {
     "on": true,
     "seg": {
       "fx": payload.settings.effect,
-      "pal": payload.settings.palette
+      "pal": payload.settings.palette,
+      "bri": payload.settings.brightness
     }
   }
   fetch(`http://${payload.settings.ip_address}/json/state`, {

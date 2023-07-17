@@ -1,3 +1,8 @@
+# Version 1.0.5
+
+## 2023-07-17 - Allow Multi Steps
+  - Added Multi Action support. Done so, users can combine actions with other plugins
+
 # Version 1.0.4
 
 ## 2023-04-07 - Added Brightness Setting

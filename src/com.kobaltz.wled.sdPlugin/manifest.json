@@ -25,7 +25,7 @@
           "LongTouch": "Unused"
         }
       },
-      "SupportedInMultiActions": false,
+      "SupportedInMultiActions": true,
       "Tooltip": "Toggle Power",
       "UUID": "com.kobaltz.wled.togglepower",
       "PropertyInspectorPath": "properties/toggle_power.html"
@@ -40,7 +40,7 @@
           "FontSize": "16"
         }
       ],
-      "SupportedInMultiActions": false,
+      "SupportedInMultiActions": true,
       "Tooltip": "Set Scene",
       "UUID": "com.kobaltz.wled.setscene",
       "PropertyInspectorPath": "properties/set_scene.html"
@@ -55,7 +55,7 @@
           "FontSize": "16"
         }
       ],
-      "SupportedInMultiActions": false,
+      "SupportedInMultiActions": true,
       "Tooltip": "Set Preset",
       "UUID": "com.kobaltz.wled.setpreset",
       "PropertyInspectorPath": "properties/set_preset.html"

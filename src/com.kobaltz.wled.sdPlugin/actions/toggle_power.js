@@ -36,11 +36,22 @@ togglePowerAction.onKeyUp(({ action, context, device, event, payload }) => {
 })
 
 togglePowerAction.onDialRotate(({ action, context, device, event, payload }) => {
-  const value = 0
+  const stepValue = payload.settings.step_value || 5;  // default to 5 if step_value is not provided
   fetch(`http://${payload.settings.ip_address}/json/state`)
     .then(response => response.json())
     .then(data => {
-      let value = Math.min(data.bri + (payload.ticks * 5), 255)
+      // Convert the brightness value from 0-255 scale to 0-100 scale
+      let currentBrightnessPercentage = Math.round((data.bri / 255) * 100);
+      
+      // Determine the minimum brightness percentage based on the stepValue
+      const minBrightnessPercentage = stepValue;
+      
+      // Calculate the new brightness value based on the stepValue
+      let newBrightnessPercentage = Math.min(Math.max(currentBrightnessPercentage + (payload.ticks * stepValue), minBrightnessPercentage), 100);
+      
+      // Convert the new brightness value back to 0-255 scale
+      let value = Math.round((newBrightnessPercentage / 100) * 255);
+      
       fetch(`http://${payload.settings.ip_address}/json/state`, {
         method: 'POST',
         headers: {
@@ -50,19 +61,18 @@ togglePowerAction.onDialRotate(({ action, context, device, event, payload }) => 
           "v": true,
           "bri": value
         })
-
       })
         .then(response => response.json())
         .then(data => {
-          const progress = Math.round((value / 255) * 100)
           $SD.setFeedback(context, {
-            'value': progress,
-            "indicator": { "value": progress, "enabled": true }
+            'value': newBrightnessPercentage,
+            "indicator": { "value": newBrightnessPercentage, "enabled": true }
           })
           updateImage(data, payload)
         })
     })
 })
+
 
 togglePowerAction.onDialPress(({ action, context, device, event, payload }) => {
   if (payload.pressed === false) {

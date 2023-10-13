@@ -54,6 +54,10 @@ $PI.onConnected((jsn) => {
     fetchEffects(event.target.value)
     fetchPalettes(event.target.value)
   })
+  // Update the step_value setting when the dropdown selection changes
+  document.querySelector('select[name="step_value"]').addEventListener('change', function (event) {
+    const stepValue = event.target.value;
+    const payload = { "event": "setSettings", "context": context, "payload": { "step_value": stepValue } };
+    $SD.connection.sendJSON(payload);
+  });
 })
-
-

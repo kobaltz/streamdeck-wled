@@ -36,7 +36,7 @@ togglePowerAction.onKeyUp(({ action, context, device, event, payload }) => {
 })
 
 togglePowerAction.onDialRotate(({ action, context, device, event, payload }) => {
-  const stepValue = payload.settings.step_value || 5;  // default to 5 if step_value is not provided
+  const stepValue = payload.settings.step_value || 1;  // default to 1 if step_value is not provided
   fetch(`http://${payload.settings.ip_address}/json/state`)
     .then(response => response.json())
     .then(data => {
